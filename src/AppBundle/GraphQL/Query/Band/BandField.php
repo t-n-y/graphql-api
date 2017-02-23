@@ -25,7 +25,6 @@ class BandField extends AbstractContainerAwareField
 
     public function resolve($value, array $args, ResolveInfo $info)
     {
-
         $em = $this->container->get('doctrine')->getManager();
         $repository = $em->getRepository(Band::class);
 

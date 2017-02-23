@@ -4,7 +4,7 @@ namespace AppBundle\GraphQL\Query;
 
 use AppBundle\GraphQL\Query\Band\BandsField;
 use AppBundle\GraphQL\Query\Band\BandField;
-use AppBundle\GraphQL\Query\Band\BandFieldByStyle;
+use AppBundle\GraphQL\Query\Band\BandsFieldByStyle;
 use AppBundle\GraphQL\Query\Style\StylesField;
 use Youshido\GraphQL\Config\Object\ObjectTypeConfig;
 use Youshido\GraphQL\Type\Object\AbstractObjectType;
@@ -23,7 +23,7 @@ class QueryType extends AbstractObjectType
         $config->addFields([
             new BandsField(),
             new BandField(),
-//            new BandFieldByStyle(),
+            new BandsFieldByStyle(),
             new StylesField(),
 
 
