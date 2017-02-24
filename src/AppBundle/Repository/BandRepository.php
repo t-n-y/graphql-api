@@ -10,4 +10,19 @@ namespace AppBundle\Repository;
  */
 class BandRepository extends \Doctrine\ORM\EntityRepository
 {
+    /**
+     * @param $styleName
+     * @return array
+     */
+    public function findByStyleName($styleName)
+    {
+        $query = $this->createQueryBuilder('b')
+            ->select('b')
+            ->leftJoin('b.style', 's')
+            ->where('s.name = :style')
+            ->setParameter('style', $styleName)
+            ->orderBy('b.name', 'ASC');
+
+        return $query->getQuery()->getResult();
+    }
 }
