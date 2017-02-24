@@ -29,11 +29,13 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "twig/twig": "^1.0||^2.0",
-        "youshido/graphql-bundle": "^1.2"
+        "youshido/graphql-bundle": "^1.2",
+        "symfony/var-dumper": "^3.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.0"
+        "symfony/phpunit-bridge": "^3.0",
+        "doctrine/doctrine-fixtures-bundle": "^2.3"
     },
     "scripts": {
         "symfony-scripts": [
