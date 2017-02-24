@@ -2,7 +2,6 @@
 
 namespace AppBundle\GraphQL\Mutation\Band;
 
-
 use AppBundle\GraphQL\Type\BandType;
 use Youshido\GraphQL\Config\Field\FieldConfig;
 use Youshido\GraphQL\Execution\ResolveInfo;
@@ -18,7 +17,7 @@ class AddBandField extends AbstractContainerAwareField
     public function build(FieldConfig $config)
     {
         $config->addArguments([
-            'name' => new NonNullType(new StringType())
+            'name' => new NonNullType(new StringType()),
         ]);
     }
 
@@ -39,5 +38,4 @@ class AddBandField extends AbstractContainerAwareField
     {
         return 'add';
     }
-
 }

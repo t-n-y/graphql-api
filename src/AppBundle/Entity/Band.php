@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Band
+ * Band.
  *
  * @ORM\Table(name="band")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\BandRepository")
@@ -35,7 +35,7 @@ class Band
     private $style;
 
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -45,7 +45,7 @@ class Band
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -59,7 +59,7 @@ class Band
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -69,7 +69,7 @@ class Band
     }
 
     /**
-     * Set style
+     * Set style.
      *
      * @param \AppBundle\Entity\Style $style
      *
@@ -83,7 +83,7 @@ class Band
     }
 
     /**
-     * Get style
+     * Get style.
      *
      * @return \AppBundle\Entity\Style
      */

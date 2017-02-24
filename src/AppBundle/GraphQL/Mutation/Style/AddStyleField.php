@@ -2,7 +2,6 @@
 
 namespace AppBundle\GraphQL\Mutation\Style;
 
-
 use AppBundle\GraphQL\Type\StyleType;
 use Youshido\GraphQL\Config\Field\FieldConfig;
 use Youshido\GraphQL\Execution\ResolveInfo;
@@ -18,7 +17,7 @@ class AddStyleField extends AbstractContainerAwareField
     public function build(FieldConfig $config)
     {
         $config->addArguments([
-            'name' => new NonNullType(new StringType())
+            'name' => new NonNullType(new StringType()),
         ]);
     }
 
@@ -39,5 +38,4 @@ class AddStyleField extends AbstractContainerAwareField
     {
         return 'addStyle';
     }
-
 }

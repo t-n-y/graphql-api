@@ -3,9 +3,8 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 24/02/2017
- * Time: 11:05
+ * Time: 11:05.
  */
-
 namespace AppBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
@@ -19,16 +18,15 @@ class LoadStyleData extends AbstractFixture implements OrderedFixtureInterface
 
     public function load(ObjectManager $manager)
     {
-        foreach (self::STYLES_ARRAY as $style){
+        foreach (self::STYLES_ARRAY as $style) {
             $styleEntity = new Style();
             $styleEntity->setName($style);
             $manager->persist($styleEntity);
 
-            $this->addReference(str_replace(" ", "", $style), $styleEntity);
+            $this->addReference(str_replace(' ', '', $style), $styleEntity);
         }
 
         $manager->flush();
-
     }
 
     public function getOrder()

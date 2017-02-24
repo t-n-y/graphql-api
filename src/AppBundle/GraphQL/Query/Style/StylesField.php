@@ -2,7 +2,6 @@
 
 namespace AppBundle\GraphQL\Query\Style;
 
-
 use AppBundle\Entity\Style;
 use AppBundle\GraphQL\Type\StyleType;
 use Youshido\GraphQL\Execution\ResolveInfo;
@@ -13,7 +12,6 @@ use Youshido\GraphQLBundle\Field\AbstractContainerAwareField;
 
 class StylesField extends AbstractContainerAwareField
 {
-
     public function resolve($value, array $args, ResolveInfo $info)
     {
         $em = $this->container->get('doctrine')->getManager();

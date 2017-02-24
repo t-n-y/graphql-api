@@ -9,7 +9,6 @@ use Youshido\GraphQL\Type\Object\AbstractObjectType;
 
 class MutationType extends AbstractObjectType
 {
-
     /**
      * @param ObjectTypeConfig $config
      *
@@ -19,7 +18,7 @@ class MutationType extends AbstractObjectType
     {
         $config->addFields([
             new AddBandField(),
-            new AddStyleField()
+            new AddStyleField(),
         ]);
     }
 }

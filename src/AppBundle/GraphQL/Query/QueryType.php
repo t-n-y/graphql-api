@@ -12,7 +12,6 @@ use Youshido\GraphQL\Type\Scalar\StringType;
 
 class QueryType extends AbstractObjectType
 {
-
     /**
      * @param ObjectTypeConfig $config
      *
@@ -26,20 +25,18 @@ class QueryType extends AbstractObjectType
             new BandsFieldByStyle(),
             new StylesField(),
 
-
             'hello' => [
-                'type'    => new StringType(),
-                'args'    => [
+                'type' => new StringType(),
+                'args' => [
                     'name' => [
                         'type' => new StringType(),
-                        'default' => 'Stranger'
-                    ]
+                        'default' => 'Stranger',
+                    ],
                 ],
                 'resolve' => function () {
-                    return 'Hello' ;
-                }
-            ]
-
+                    return 'Hello';
+                },
+            ],
 
         ]);
     }

@@ -3,16 +3,14 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 24/02/2017
- * Time: 11:05
+ * Time: 11:05.
  */
-
 namespace AppBundle\DataFixtures\ORM;
 
 use AppBundle\Entity\Band;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use AppBundle\Entity\Style;
 
 class LoadBandData extends AbstractFixture implements OrderedFixtureInterface
 {
