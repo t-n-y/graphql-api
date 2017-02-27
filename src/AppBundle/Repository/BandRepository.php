@@ -12,6 +12,7 @@ class BandRepository extends \Doctrine\ORM\EntityRepository
 {
     /**
      * @param $styleName
+     *
      * @return array
      */
     public function findByStyleName($styleName)

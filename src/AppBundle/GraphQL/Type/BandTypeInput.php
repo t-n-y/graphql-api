@@ -18,7 +18,7 @@ class BandTypeInput extends AbstractInputObjectType
     {
         $config->addFields([
             'name' => new StringType(),
-            'style' => new IdType()
+            'style' => new IdType(),
         ]);
     }
 }

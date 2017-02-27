@@ -16,7 +16,7 @@ class StyleTypeInput extends AbstractInputObjectType
     public function build($config)
     {
         $config->addFields([
-            'name' => new StringType()
+            'name' => new StringType(),
         ]);
     }
 }

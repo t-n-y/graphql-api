@@ -10,10 +10,8 @@ use Symfony\Component\Config\Definition\Exception\Exception;
 use Youshido\GraphQL\Config\Field\FieldConfig;
 use Youshido\GraphQL\Execution\ResolveInfo;
 use Youshido\GraphQL\Type\AbstractType;
-use Youshido\GraphQL\Type\ListType\ListType;
 use Youshido\GraphQL\Type\NonNullType;
 use Youshido\GraphQL\Type\Object\AbstractObjectType;
-use Youshido\GraphQL\Type\Scalar\StringType;
 use Youshido\GraphQLBundle\Field\AbstractContainerAwareField;
 
 class AddBandField extends AbstractContainerAwareField

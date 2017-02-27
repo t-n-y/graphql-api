@@ -8,10 +8,8 @@ use AppBundle\GraphQL\Type\StyleTypeInput;
 use Youshido\GraphQL\Config\Field\FieldConfig;
 use Youshido\GraphQL\Execution\ResolveInfo;
 use Youshido\GraphQL\Type\AbstractType;
-use Youshido\GraphQL\Type\ListType\ListType;
 use Youshido\GraphQL\Type\NonNullType;
 use Youshido\GraphQL\Type\Object\AbstractObjectType;
-use Youshido\GraphQL\Type\Scalar\StringType;
 use Youshido\GraphQLBundle\Field\AbstractContainerAwareField;
 
 class AddStyleField extends AbstractContainerAwareField
@@ -21,7 +19,7 @@ class AddStyleField extends AbstractContainerAwareField
         $config->addArguments([
             'style' => new NonNullType(new StyleTypeInput()),
         ]);
-        $config->setDescription("Add new Style");
+        $config->setDescription('Add new Style');
     }
 
     public function resolve($value, array $args, ResolveInfo $info)
