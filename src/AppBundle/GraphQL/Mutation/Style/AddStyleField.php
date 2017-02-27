@@ -2,7 +2,9 @@
 
 namespace AppBundle\GraphQL\Mutation\Style;
 
+use AppBundle\Entity\Style;
 use AppBundle\GraphQL\Type\StyleType;
+use AppBundle\GraphQL\Type\StyleTypeInput;
 use Youshido\GraphQL\Config\Field\FieldConfig;
 use Youshido\GraphQL\Execution\ResolveInfo;
 use Youshido\GraphQL\Type\AbstractType;
@@ -17,13 +19,22 @@ class AddStyleField extends AbstractContainerAwareField
     public function build(FieldConfig $config)
     {
         $config->addArguments([
-            'name' => new NonNullType(new StringType()),
+            'style' => new NonNullType(new StyleTypeInput()),
         ]);
+        $config->setDescription("Add new Style");
     }
 
     public function resolve($value, array $args, ResolveInfo $info)
     {
-        return $this->container->get('resolver.style')->create($args['name']);
+        $em = $this->container->get('doctrine')->getManager();
+
+        $style = new Style();
+        $style->setName($args['style']['name']);
+
+        $em->persist($style);
+        $em->flush();
+
+        return $style;
     }
 
     /**
@@ -31,7 +42,7 @@ class AddStyleField extends AbstractContainerAwareField
      */
     public function getType()
     {
-        return new ListType(new StyleType());
+        return new StyleType();
     }
 
     public function getName()
